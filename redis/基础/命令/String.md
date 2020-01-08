@@ -1,18 +1,34 @@
-### String
+# String
 
-- set key value
-- del key
-- get key
-- exists key
-- setex key seconds value
-- getset key value
-- incr key
-- decr key
-- incrby key increment
-- decr by decrement
-- SETNX key value--key不存在才设置value
-- append key value
-- strlen key
-- mget key1 key2 ...
-- mset key1 value1 key2 value2 key3 value3...
-- msetnx  key1 value1 key2 value2 key3 value3...
+### set key value
+
+### del key
+
+### get key
+
+### exists key
+
+### setex key seconds value
+
+### getset key value
+
+### incr key
+
+### decr key
+
+### incrby key increment
+
+### decr by decrement
+
+### SETNX key value
+    key不存在才设置value
+### append key value
+
+### strlen key
+
+### mget key1 key2 ...
+
+### mset key1 value1 key2 value2 key3 value3...
+
+### msetnx  key1 value1 key2 value2 key3 value3...
+
