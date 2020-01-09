@@ -9,7 +9,7 @@
       ApplicationClassLoader：应用程序加载类或称为系统类加载器。这个类加载器是ClassLoader中的getSystemClassLoader()方法的返回值。加载用户类路径上所指定的类库。开发者可以直接使用这个类库。如果应用程序没有自定义过自己的类加载器，一般情况作为程序中的默认类加载器。
 
 双亲委派机制
-
+![双亲委派机制](https://github.com/Leeyuanlong/pict_bank/blob/master/java/deep_leraning_jvm/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%9C%BA%E5%88%B6.png)
 
 
 加载：类加载器根据一个类的全限定名来读取二级制字节流到JVM中，将这个字节流代表的静态存储结构转化为方法区的运行时数据结构，然后转换为一个与目标类对应的java.lang.Class对象。
