@@ -125,9 +125,10 @@ create table tb_name(
 因为MySQL的表名以目录的形式存在磁盘上，所以表名的字符可以用任何目录名允许的字符。
 2）查看表定义:
 ```mysql
-show table like '%tb_name%'
+show tables like '%tb_name%';#按照表明模糊查询表
+select count(*) from INFORMATION_SCHEMA.TABLES where TABLE_SCHEMA ='db_name' and table_name like '%tb_name%';#查询指定表的数量
 desc tb_name;  #查看表的定义
-show create table tb_name\g #查看表定义，信息更全面
+show create table 'tb_name'; #查看表定义，信息更全面
 ```
 
 3）删除表:
