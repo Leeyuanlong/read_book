@@ -56,7 +56,7 @@
 ```java
 class IllegalAgeException extends RuntimeException {
    	public IllegalAgeException() {
-   
+   `
    	}
    
    	public IllegalAgeException(String message) {
@@ -64,3 +64,19 @@ class IllegalAgeException extends RuntimeException {
    	}
 }
 ```
+
+## 补充
+
+java中的异常的超类是`java.lang.Throwable`(后文省略为Throwable),它有两个比较重要的子类,`java.lang.Exception`(后文省略为Exception)和
+`java.lang.Error`(后文省略为Error)，其中Error由JVM虚拟机进行管理,如我们所熟知的`OutOfMemoryError`异常等，所以我们本文不关注Error异常，
+那么我们细说一下Exception异常。
+
+Exception异常有个比较重要的子类，叫做`RuntimeException`。我们将RuntimeException或其他继承自`RuntimeException`的子类称为非受检异
+常(unchecked Exception)，其他继承自Exception异常的子类称为受检异常(checked Exception)。
+
+如果在一个应用中，需要开发一个方法(如某个功能的service方法)，这个方法如果中间可能出现异常，那么你需要考虑这个异常出现之后是否调用者可以处理，
+并且你是否希望调用者进行处理，如果调用者可以处理，并且你也希望调用者进行处理，那么就要抛出受检异常，提醒调用者在使用你的方法时，考虑到如果抛出
+异常时如果进行处理。
+
+相似的，如果在写某个方法时，你认为这是个偶然异常，理论上说，你觉得运行时可能会碰到什么问题，而这些问题也许不是必然发生的，也不需要调用者显示的
+通过异常来判断业务流程操作的，那么这时就可以使用一个RuntimeException这样的非受检异常.
