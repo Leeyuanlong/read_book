@@ -106,8 +106,12 @@ So，让我们牢记两点：
 关于System.gc()，可以参考 @bluedavy 的几篇文章：
 
 - [CMS GC会不会回收Direct ByteBuffer的内存](http://hellojava.info/?p=56)
+
 - [说说在Java启动参数上我犯的错](http://hellojava.info/?p=323)
+
 - [java.lang.OutOfMemoryError:Map failed](http://hellojava.info/?p=319)
+
+  
 
 > ###  **六、指定容器初始化大小**
 
@@ -136,8 +140,12 @@ Google Guava框架对于容器的初始容量提供了非常便捷的工具方�
 反例：如果采用默认无参构造函数，创建一个ArrayList，不断增加元素直到OOM，那么在此过程中会导致：
 
 - 多次数组扩容，重新分配更大空间的数组
+
 - 多次数组拷贝
+
 - 内存碎片
+
+  
 
 > ### **七、对象池**
 
